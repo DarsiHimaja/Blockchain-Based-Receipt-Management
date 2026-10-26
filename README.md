@@ -2,23 +2,6 @@
 
 A decentralized application for issuing tamper-proof digital receipts on the Ethereum blockchain, tracking lifetime purchase history, and verifying authenticity without middlemen.
 
----
-
-## Screenshots
-
-### 1. Home / Dashboard
-![Dashboard](screenshots/01_home_dashboard.png)
-
-### 2. Merchant Portal
-![Merchant Portal](screenshots/02_merchant_portal.png)
-
-### 3. Customer Purchase History
-![Purchase History](screenshots/03_customer_purchase_history.png)
-
-### 4. Receipt Verifier
-![Receipt Verifier](screenshots/04_verifier_page.png)
-
----
 
 ## File Structure
 
