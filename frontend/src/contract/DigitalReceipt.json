@@ -1,0 +1,273 @@
+{
+  "address": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+  "network": "localhost",
+  "chainId": 31337,
+  "deployedAt": "2026-10-25T09:02:02.438Z",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "merchant",
+          "type": "address"
+        }
+      ],
+      "name": "MerchantRegistered",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "merchant",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "buyer",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "ReceiptIssued",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        }
+      ],
+      "name": "ReceiptRefunded",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "getPurchaseHistory",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "merchant",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "buyer",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "issuedAt",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "itemsHash",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "string",
+              "name": "itemDetails",
+              "type": "string"
+            },
+            {
+              "internalType": "bool",
+              "name": "refunded",
+              "type": "bool"
+            }
+          ],
+          "internalType": "struct DigitalReceipt.Receipt[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        }
+      ],
+      "name": "getReceipt",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "merchant",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "buyer",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "issuedAt",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "itemsHash",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "string",
+              "name": "itemDetails",
+              "type": "string"
+            },
+            {
+              "internalType": "bool",
+              "name": "refunded",
+              "type": "bool"
+            }
+          ],
+          "internalType": "struct DigitalReceipt.Receipt",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "isMerchant",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "buyer",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "itemDetails",
+          "type": "string"
+        }
+      ],
+      "name": "issueReceipt",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "receiptId",
+          "type": "uint256"
+        }
+      ],
+      "name": "markRefunded",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "registerMerchant",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "receiptId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "itemsHash",
+          "type": "bytes32"
+        }
+      ],
+      "name": "verifyReceipt",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ]
+}
